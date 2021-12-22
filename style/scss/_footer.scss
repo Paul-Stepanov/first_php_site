@@ -1,0 +1,13 @@
+//********* footer **************
+.footer {
+  background-color: rgba(221, 221, 221, 0.05);
+  border-top: rgba(221, 221, 221, 0.5) 1px solid;
+  display: grid;
+
+  &__text {
+    align-self: center;
+    justify-self: center;
+  }
+}
+
+//********* footer **************

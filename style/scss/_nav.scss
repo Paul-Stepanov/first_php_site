@@ -1,0 +1,29 @@
+//********* nav *************
+.nav {
+  height: 100%;
+  display: grid;
+  align-content: center;
+  justify-content: end;
+
+  &__items {
+    display: flex;
+  }
+
+  &__item {
+    transition: all 500ms ease-out;
+
+    a {
+      &:hover {
+        text-shadow: #DDDDDD 2px 2px 5px, #DDDDDD -2px -2px 5px;
+        transform: scale(1, 1);
+
+      }
+
+      margin: 5px;
+      padding: 10px;
+      color: white;
+    }
+  }
+}
+
+//********* nav *************
