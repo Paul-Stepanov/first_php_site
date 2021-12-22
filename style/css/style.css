@@ -1,0 +1,301 @@
+@charset "UTF-8";
+/*Обнуление*/
+* {
+  padding: 0;
+  margin: 0;
+  border: 0;
+}
+
+*,
+*:before,
+*:after {
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+:focus,
+:active {
+  outline: none;
+}
+
+a:focus,
+a:active {
+  outline: none;
+}
+
+nav,
+footer,
+header,
+aside {
+  display: block;
+}
+
+html,
+body {
+  height: 100%;
+  width: 100%;
+  font-size: 100%;
+  line-height: 1;
+  font-size: 14px;
+  -ms-text-size-adjust: 100%;
+  -moz-text-size-adjust: 100%;
+  -webkit-text-size-adjust: 100%;
+}
+
+input,
+button,
+textarea {
+  font-family: inherit;
+}
+
+input::-ms-clear {
+  display: none;
+}
+
+button {
+  cursor: pointer;
+}
+
+button::-moz-focus-inner {
+  padding: 0;
+  border: 0;
+}
+
+a,
+a:visited {
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: none;
+}
+
+ul li {
+  list-style: none;
+}
+
+img {
+  vertical-align: top;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-size: inherit;
+  font-weight: 400;
+}
+
+/*--------------------*/
+body {
+  font-family: sans-serif;
+  color: white;
+  display: grid;
+  grid-template-rows: 50px 1fr 50px;
+  border: #DDDDDD;
+  background: url(../../img/background.jpg) 0 0/cover no-repeat fixed;
+}
+
+.header {
+  border-bottom: rgba(221, 221, 221, 0.5) 1px solid;
+}
+.header__nav {
+  background-color: rgba(221, 221, 221, 0.05);
+}
+
+.nav {
+  height: 100%;
+  display: grid;
+  align-content: center;
+  justify-content: end;
+}
+.nav__items {
+  display: flex;
+}
+.nav__item {
+  transition: all 500ms ease-out;
+}
+.nav__item a {
+  margin: 5px;
+  padding: 10px;
+  color: white;
+}
+.nav__item a:hover {
+  text-shadow: #DDDDDD 2px 2px 5px, #DDDDDD -2px -2px 5px;
+  transform: scale(1, 1);
+}
+
+.main {
+  font-size: 50px;
+  align-self: center;
+  justify-self: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.main__header {
+  margin-bottom: 10px;
+}
+.main__photo {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+}
+.main__photo-inner {
+  border-radius: 100%;
+  border: 2px solid white;
+  width: 300px;
+  height: 300px;
+  object-fit: cover;
+  object-position: 50% 50%;
+  box-shadow: 0 14px 28px rgba(253, 251, 251, 0.25), 0 10px 10px rgba(255, 255, 255, 0.22);
+}
+
+.footer {
+  background-color: rgba(221, 221, 221, 0.05);
+  border-top: rgba(221, 221, 221, 0.5) 1px solid;
+  display: grid;
+}
+.footer__text {
+  align-self: center;
+  justify-self: center;
+}
+
+.form {
+  font-size: 15px;
+  display: grid;
+  align-self: center;
+  justify-self: center;
+  position: relative;
+}
+.form__title {
+  font-size: 18px;
+  line-height: 1.5;
+}
+.form__body {
+  padding: 20px;
+  border: #DDDDDD 1px solid;
+  border-radius: 3px;
+  width: 350px;
+  display: flex;
+  flex-direction: column;
+}
+.form__label {
+  display: flex;
+  justify-content: space-between;
+  padding: 10px;
+  margin-right: 5px;
+}
+.form__input {
+  color: white;
+  min-width: 65%;
+  height: 25px;
+  background-color: rgba(221, 221, 221, 0.2);
+  border-radius: 3px;
+  padding: 5px;
+  border: 1px solid white;
+  transition: all 0.2s ease-in-out;
+}
+.form__input:focus {
+  box-shadow: #DDDDDD 0px -2px 5px;
+}
+.form__input:hover {
+  box-shadow: #DDDDDD 0px -2px 5px, #DDDDDD 0px 2px 5px;
+}
+.form__wrap-radio-btn {
+  width: 65%;
+  display: grid;
+  align-items: center;
+  grid-template-columns: auto 1fr;
+  grid-template-areas: "radio-btn1 radio-btn2" "radio-btn3 radio-btn4";
+}
+.form__wrap-radio-btn #radio-btn1 {
+  grid-area: radio-btn1;
+}
+.form__wrap-radio-btn #radio-btn2 {
+  grid-area: radio-btn2;
+}
+.form__wrap-radio-btn #radio-btn3 {
+  grid-area: radio-btn3;
+}
+.form__wrap-radio-btn #radio-btn4 {
+  grid-area: radio-btn4;
+}
+.form__submit {
+  border: #DDDDDD 1px solid;
+  color: white;
+  margin-top: 10px;
+  height: 30px;
+  border-radius: 3px;
+  font-weight: 700;
+  min-width: 40%;
+  padding: 0 5px;
+  align-self: center;
+  transition: all 0.2s ease-in;
+  background-color: rgba(221, 221, 221, 0.2);
+}
+.form__submit:hover {
+  transform: scale(1.05, 1.05);
+  box-shadow: #DDDDDD 0px -2px 5px, #DDDDDD 0px 2px 5px;
+}
+.form__error {
+  display: block;
+  color: red;
+  font-size: 12px;
+  text-align: center;
+}
+.form__body--radio-btn {
+  flex-direction: row;
+}
+.form__label--radio-btn {
+  display: block;
+}
+.form__input--radio-btn {
+  width: 21px;
+  height: 21px;
+  margin-top: 5px;
+}
+.form__input--radio-btn:hover {
+  border-radius: 10px;
+  box-shadow: none;
+}
+.form__input--radio-btn:focus {
+  box-shadow: none;
+}
+.form__submit--big {
+  width: 100%;
+}
+.form__input--file {
+  cursor: pointer;
+  border: none;
+  background-color: transparent;
+  width: 80%;
+}
+.form__photo {
+  position: absolute;
+  right: -25%;
+  top: 0;
+}
+.form__photo-inner {
+  border-radius: 100%;
+  border: 1px solid white;
+  width: 120px;
+  height: 120px;
+  object-fit: cover;
+  object-position: 50% 50%;
+}
+.form__input-upload-img {
+  position: absolute;
+  right: -25%;
+  top: 0;
+  border-radius: 100%;
+  width: 120px;
+  height: 120px;
+  cursor: pointer;
+  opacity: 0;
+}
+
+/*# sourceMappingURL=style.css.map */
