@@ -15,7 +15,6 @@
       <ul class="nav__items">
          <li class="nav__item"><a href="../pages/index.php">Главная</a></li>
          <li class=" nav__item"><a href="../pages/profile.php">Профиль</a></li>
-         <li class="nav__item"><a href="../pages/login.php">Авторизация</a></li>
          <li class=" nav__item"><a href="../pages/signin.php">Регистрация</a></li>
          <li class=" nav__item"><a href="../pages/logout.php">Выход (<?= $userName ?>)</a></li>
       </ul>

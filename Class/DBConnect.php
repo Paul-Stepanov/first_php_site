@@ -4,8 +4,8 @@ class DB
 {
    // переменные для подключения к БД
    private $host = 'localhost';
-   private $userName = 'JohnGolt';
-   private $passWord = 'JohnGolt13';
+   private $userName = 'root';
+   private $passWord = '';
    private $dbName = 'mysite';
 
    // создание подключения к БД

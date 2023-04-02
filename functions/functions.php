@@ -42,6 +42,7 @@ function renderAnArray($array) //отрисовка массива в столб
    echo "<pre>";
    print_r($array);
    echo "</pre>";
+   die();
 }
 
 function checkCookies() // проверка куки и сессии
